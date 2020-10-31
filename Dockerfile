@@ -11,4 +11,4 @@ FROM openjdk:8-jre-alpine as runner
 EXPOSE 8080
 COPY --from=builder /app/app.jar /app/app.jar
 WORKDIR /app
-CMD ["java", "-jar", "app.jar"]
+CMD ["java", "-jar", "app.jar", "--server.port=8080"]
